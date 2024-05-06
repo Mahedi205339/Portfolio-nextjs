@@ -2,6 +2,7 @@
 import Image from 'next/image'
 // import Link from 'next/link'
 import React, { useState } from 'react'
+import NavLinks from './navLinks'
 
 const links = [
   { url: "/", title: "Home" },
@@ -16,18 +17,19 @@ const Navbar = () => {
 
   return (
     <div className='h-full flex items-center justify-between px-4 lg:px-20 sm:px-8 md:px-20 xl:px-48'>
-      <div className='hidden md:flex gap-4 w-1/3'>
+      {/* LINKS  */}
+      <div className='hidden md:flex gap-4 w-1/3  text-lg'>
         {
           links.map(link => (
-            <a key={link.title} href={link.url}>{link.title}</a>
+            <NavLinks key={link.title} link={link}/>
           ))
         }
       </div>
       {/* Logo  */}
-      <div className='md:hidden lg:flex w-1/3  justify-center items-center'>
-        <a href="/" className='text-sm bg-black rounded-md font-bold flex items-center border-black border-2'>
+      <div className='md:hidden lg:flex w-1/3  xl:justify-center xl:items-center'>
+        <a href="/" className='text-xl bg-black rounded-md font-bold flex items-center border-black border-2'>
           <span className='text-white pl-2 pr-1'>MAH</span>
-          <span className='w-12 h-8 bg-white text-black flex items-center justify-center pr-2 font-bold'>EDI</span>
+          <span className=' h-8 bg-white text-black pr-2 flex justify-center items-center '>EDI.</span>
         </a>
 
       </div>
