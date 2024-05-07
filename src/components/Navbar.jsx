@@ -28,7 +28,7 @@ const Navbar = () => {
       {/* Logo  */}
       <div className='md:hidden lg:flex w-1/3  xl:justify-center xl:items-center'>
         <a href="/" className='text-xl bg-black rounded-md font-bold flex items-center border-black border-2'>
-          <span className='text-white pl-2 pr-1'>MAH</span>
+          <span className='text-white pl-2 pr-1 bg-gradient-to-r from-cyan-500 to-blue-600'>MAH</span>
           <span className=' h-8 bg-white text-black pr-2 flex justify-center items-center '>EDI.</span>
         </a>
 

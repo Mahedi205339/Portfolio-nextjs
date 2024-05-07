@@ -1,28 +1,50 @@
+"use client"
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
+import Typewriter from 'typewriter-effect';
 import React from 'react';
 import "./layout.css"
 
 const Homepage = () => {
   return (
-    <div className='h-full flex flex-col '>
+    <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
 
       {/* IMAGE CONTAINER */}
-      <div className='h-1/2 relative'>
-        <Image src="/hero.png" alt='hero' fill className='object-contain' />
+      <div className='h-1/2 relative lg:h-full lg:w-1/2'>
+        <Image src="/banner.png" alt='hero' fill className='object-contain' />
       </div>
       {/* TEXT CONTAINER  */}
-      <div className='h-1/2 flex flex-col items-start gap-4 justify-center px-5 py-2'>
-        <h2>
+      <div className='h-1/2 flex flex-col items-start gap-3 justify-center px-5 py-2 lg:h-full lg:w-1/2 '>
+        <h2 className='text-lg md:text-2xl lg:text-3xl font-semibold'>
           Hello
         </h2>
-        <h1 className=''>
-          I'm Mahedi Hasan
-        </h1>
-        <p>
+        <div className='flex items-center gap-1'>
+
+          <div className='text-xl md:text-3xl  lg:text-5xl xl:text-6xl font-bold effect-text'>
+            <Typewriter options={{
+              strings: ["I'm Mahedi Hasan"],
+              delay: 100,
+
+              autoStart: true,
+              loop: true,
+            }} />
+          </div>
+
+
+        </div>
+        {/* <p className='text-xl font-semibold'>
           Front-end Web Developer
-        </p>
-        <p>
+        </p> */}
+        <div className='text-xl font-semibold effect-text'>
+            <Typewriter options={{
+              strings: ["Front-end Web Developer"],
+              delay: 100,
+
+              autoStart: true,
+              loop: true,
+            }} />
+          </div>
+        <p className='text-xs md:text-base lg:text-base'>
           Build a personal website or portfolio that showcases my projects, skills,
           and experience. Include detailed descriptions of the technologies I've used,
           problems I've solved, and the impact of my work.
