@@ -15,12 +15,12 @@ const Homepage = () => {
       </div>
       {/* TEXT CONTAINER  */}
       <div className='h-1/2 flex flex-col items-start gap-3 justify-center px-5 py-2 lg:h-full lg:w-1/2 '>
-        <h2 className='text-lg md:text-2xl lg:text-3xl font-semibold'>
+        <h2 className='text-base md:text-2xl lg:text-3xl font-semibold'>
           Hello
         </h2>
         <div className='flex items-center gap-1'>
 
-          <div className='text-xl md:text-3xl  lg:text-5xl xl:text-6xl font-bold effect-text'>
+          <div className='text-2xl md:text-3xl  lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold effect-text'>
             <Typewriter options={{
               strings: ["I'm Mahedi Hasan"],
               delay: 100,
@@ -32,10 +32,8 @@ const Homepage = () => {
 
 
         </div>
-        {/* <p className='text-xl font-semibold'>
-          Front-end Web Developer
-        </p> */}
-        <div className='text-xl font-semibold effect-text'>
+       
+        <div className='text-base md:text-xl font-semibold effect-text'>
             <Typewriter options={{
               strings: ["Front-end Web Developer"],
               delay: 100,
@@ -52,8 +50,8 @@ const Homepage = () => {
         </p>
         {/* button  */}
         <div className='flex gap-4'>
-          <button className='px-4 py-3 work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>View My Work</button>
-          <button class="px-4 py-3 bg-white  rounded-lg border border-cyan-600 gradient-text contact-btn hover:bg-gradient-to-r from-cyan-500 to-blue-600">Contact me</button>
+          <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>View My Work</button>
+          <button class="px-3 py-2 md:px-4 md:py-3 text-xs md:text-base bg-white  rounded-lg border border-cyan-600 gradient-text contact-btn hover:bg-gradient-to-r from-cyan-500 to-blue-600">Contact me</button>
 
         </div>
 
