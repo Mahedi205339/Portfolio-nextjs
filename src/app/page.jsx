@@ -51,7 +51,7 @@ const Homepage = () => {
         {/* button  */}
         <div className='flex gap-4'>
           <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>View My Work</button>
-          <button class="px-3 py-2 md:px-4 md:py-3 text-xs md:text-base bg-white  rounded-lg border border-cyan-600 gradient-text contact-btn hover:bg-gradient-to-r from-cyan-500 to-blue-600">Contact me</button>
+          <button className="px-3 py-2 md:px-4 md:py-3 text-xs md:text-base bg-white  rounded-lg border border-cyan-600 gradient-text contact-btn hover:bg-gradient-to-r from-cyan-500 to-blue-600">Contact me</button>
 
         </div>
 
