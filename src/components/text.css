@@ -1,0 +1,6 @@
+.transition-pathText{
+    color: transparent;
+    background-image: linear-gradient(to right, #06b6d4, #2563eb); /* adjust colors as needed */
+    -webkit-background-clip: text;
+    background-clip: text;
+}

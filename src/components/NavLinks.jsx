@@ -11,7 +11,7 @@ const NavLinks = ({link}) => {
 
     return (
         <div>
-            <Link className={` rounded p-1 ${pathName  === link.url && "bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-2"} `} href={link.url}>{link.title}</Link>
+            <Link className={`  rounded p-1 ${pathName  === link.url && "bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-2"} `} href={link.url}>{link.title}</Link>
         </div>
     );
 };

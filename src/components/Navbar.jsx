@@ -1,10 +1,11 @@
 "use client"
 import Image from 'next/image'
-// import Link from 'next/link'
 import React, { useState } from 'react'
 import NavLinks from './navLinks'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import './text.css'
+
 
 const links = [
   { url: "/", title: "Home" },
@@ -73,7 +74,7 @@ const Navbar = () => {
   return (
     <div className='h-full flex items-center justify-between px-4 lg:px-20 sm:px-8 md:px-20 xl:px-48'>
       {/* LINKS  */}
-      <div className='hidden md:flex gap-4 w-1/3  text-lg'>
+      <div className='hidden md:flex gap-4 w-1/3  text-base'>
         {
           links.map(link => (
             <NavLinks key={link.title} link={link} />
@@ -135,14 +136,14 @@ const Navbar = () => {
        {
         open &&
          <motion.div variants={listVariants} initial="closed" animate="opened"
-         className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40">
+         className="absolute top-0 left-0 w-screen h-screen bg-black  flex flex-col items-center justify-center gap-8 text-4xl z-40">
            {links.map((link) => (
               <motion.div
                 variants={listItemVariants}
                 className=""
                 key={link.title}
               >
-                <Link href={link.url}>{link.title}</Link>
+                <Link className='transition-pathText' href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
         </motion.div>
