@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import React from 'react';
 import "./layout.css"
 import { motion } from 'framer-motion'
+import Link from 'next/link';
 
 const Homepage = () => {
   return (
@@ -58,9 +59,12 @@ const Homepage = () => {
           </p>
           {/* button  */}
           <div className='flex gap-4'>
+            <Link href="/about">
             <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>View My Work</button>
+            </Link>
+            <Link href="/">
             <button className="px-3 py-2 md:px-4 md:py-3 text-xs md:text-base bg-white  rounded-lg border border-cyan-600 gradient-text contact-btn hover:bg-gradient-to-r from-cyan-500 to-blue-600">Contact me</button>
-
+            </Link>
           </div>
 
 

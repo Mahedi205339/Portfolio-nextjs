@@ -133,11 +133,11 @@ const Navbar = () => {
 
         </button>
         {/* Menu List  */}
-       {
-        open &&
-         <motion.div variants={listVariants} initial="closed" animate="opened"
-         className="absolute top-0 left-0 w-screen h-screen bg-black  flex flex-col items-center justify-center gap-8 text-4xl z-40">
-           {links.map((link) => (
+        {
+          open &&
+          <motion.div variants={listVariants} initial="closed" animate="opened"
+            className="absolute top-0 left-0 w-screen h-screen bg-black  flex flex-col items-center justify-center gap-8 text-4xl z-40">
+            {links.map((link) => (
               <motion.div
                 variants={listItemVariants}
                 className=""
@@ -146,9 +146,9 @@ const Navbar = () => {
                 <Link className='transition-pathText' href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
-        </motion.div>
-       }
-       
+          </motion.div>
+        }
+
       </div>
     </div>
   )

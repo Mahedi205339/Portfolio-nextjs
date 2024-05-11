@@ -31,7 +31,7 @@ const AboutPage = () => {
             {/* CONTAINER */}
             <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
                 {/* TEXT CONTAINER */}
-                <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+                <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2 ">
                     {/* BIOGRAPHY CONTAINER */}
                     <div className="flex flex-col gap-4 justify-center">
                         {/* BIOGRAPHY IMAGE */}
@@ -174,27 +174,27 @@ const AboutPage = () => {
                         </motion.h1>
                         {/* EXPERIENCE LIST */}
                         <motion.div
-                            initial={{ x: "-300px" }}
+                            initial={{ x: "-300px"  }}
                             animate={isExperienceRefInView ? { x: "0" } : {}}
                             className=""
                         >
-                            {/* EXPERIENCE LIST ITEM */}
+                            {/* Education LIST ITEM */}
                             <div className="flex justify-between h-48">
                                 {/* LEFT */}
                                 <div className="w-1/3 ">
-                                    {/* JOB TITLE */}
+                                    {/* CLASS TITLE */}
                                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
                                         Bachelor 
                                     </div>
-                                    {/* JOB DESC */}
+                                    {/* CLASS DESC */}
                                     <div className="p-3 text-sm italic">
                                     Commencing my Bachelor's degree in Computer Science Engineering....{" "}
                                     </div>
-                                    {/* JOB DATE */}
+                                    {/* cLASS DATE */}
                                     <div className="p-3 transition-pathText text-sm font-semibold">
                                         2024 - Present
                                     </div>
-                                    {/* JOB COMPANY */}
+                                    {/* INSTITUTE */}
                                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
                                         BUBT
                                     </div>
@@ -210,7 +210,7 @@ const AboutPage = () => {
                                 {/* RIGHT */}
                                 <div className="w-1/3 "></div>
                             </div>
-                            {/* EXPERIENCE LIST ITEM */}
+                            {/* EDUCATION LIST ITEM */}
                             <div className="flex justify-between h-48">
                                 {/* LEFT */}
                                 <div className="w-1/3 "></div>
@@ -236,25 +236,25 @@ const AboutPage = () => {
                                     <div className="p-3 transition-pathText text-sm font-semibold">
                                         2021 - 2022(2023){" "}
                                     </div>
-                                    {/* JOB COMPANY */}
+                                    {/* INSTITUTE */}
                                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
                                         SPSC
                                     </div>
                                 </div>
                             </div>
-                            {/* EXPERIENCE LIST ITEM */}
+                            {/* EDUCATION LIST ITEM */}
                             <div className="flex justify-between h-48">
                                 {/* LEFT */}
                                 <div className="w-1/3 ">
-                                    {/* JOB TITLE */}
+                                    {/* CLASS TITLE */}
                                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
                                     Senior School Certificate{" "}
                                     </div>
-                                    {/* JOB DESC */}
+                                    {/* CLASS DESC */}
                                     <div className="p-3 text-sm italic">
                                     Having successfully completed my Higher Secondary Certificate (SSC) ..{" "}
                                     </div>
-                                    {/* JOB DATE */}
+                                    {/* CLASS DATE */}
                                     <div className="p-3 transition-pathText text-sm font-semibold">
                                         2020{" "}
                                     </div>
