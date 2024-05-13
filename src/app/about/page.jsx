@@ -9,9 +9,7 @@ import '@/components/text.css'
 
 const AboutPage = () => {
 
-
     const containerRef = useRef();
-
     const { scrollYProgress } = useScroll({ container: containerRef });
 
     const skillRef = useRef();
