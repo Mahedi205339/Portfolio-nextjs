@@ -12,6 +12,8 @@ const PortfolioPage = () => {
         <div>
             portfolio page
             <h2>Portfolio will show here</h2>
+            <h2>Portfolio will show here</h2>
+            <h3>texting github commit if it working</h3>
         </div>
     </motion.div>
     );
