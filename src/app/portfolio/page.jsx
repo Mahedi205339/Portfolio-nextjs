@@ -11,6 +11,7 @@ const PortfolioPage = () => {
     >
         <div>
             portfolio page
+            <h2>Portfolio will show here</h2>
         </div>
     </motion.div>
     );
