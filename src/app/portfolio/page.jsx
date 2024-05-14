@@ -1,12 +1,9 @@
 "use client"
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 const PortfolioPage = () => {
 
-    const ref = useRef()
 
-    const { scrollYProgress } = useScroll()
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
 
     return (
         <motion.div
@@ -15,12 +12,16 @@ const PortfolioPage = () => {
             animate={{ y: "0%" }}
             transition={{ duration: 1 }}
         >
-            <div className='h-[600vh]' ref={ref}>
-                <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
+            <div className='h-[600vh]' >
+                <motion.div
+                    className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center"
+                    initial={{ y: "0%", fontSize: "8rem" }}
+                >
                     My Projects
-                </div>
-                <div className='sticky top-0 flex h-screen gap-4 items-center'>
-
+                </motion.div>
+                <div className='h-[100vh] bg-gradient-to-t bg-cyan-500 to to-blue-500'>
+                    {/* Content goes here */}
+                    
                 </div>
             </div>
         </motion.div>
@@ -28,3 +29,5 @@ const PortfolioPage = () => {
 };
 
 export default PortfolioPage;
+
+
