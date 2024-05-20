@@ -6,15 +6,16 @@ import React from 'react';
 import "./layout.css"
 import { motion } from 'framer-motion'
 import Link from 'next/link';
+import { IoMdDownload } from "react-icons/io";
 
 const Homepage = () => {
   return (
-    <motion.div 
-    className='h-full'
-    initial={{y:"-200vh"}}
-    animate={{y:"0%"}}
-    transition={{duration: 1}}
->
+    <motion.div
+      className='h-full'
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+    >
 
       <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
 
@@ -60,12 +61,17 @@ const Homepage = () => {
           {/* button  */}
           <div className='flex gap-4'>
             <Link href="/portfolio">
-            <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>View My Work</button>
+              <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>View My Work</button>
             </Link>
             <Link href="/contact">
-            <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>Contact Me</button>
+              <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>Contact Me</button>
             </Link>
-            
+            <a href='/Mahedi_resume.pdf' download="Mahedi_resume.pdf" className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white flex flex-row gap-3'>
+              <IoMdDownload className='text-black' size={30}/>
+              <p>Resume</p>
+            </a>
+
+
           </div>
 
 
