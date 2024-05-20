@@ -1,23 +1,45 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
+import Link from 'next/link';
+import Image from 'next/image';
+
 const ContactPage = () => {
 
-    const [success, setSuccess] = useState(true)
-    const [error, setError] = useState(false)
-    const text = "Say Hello";
+    // const [success, setSuccess] = useState(true)
+    // const [error, setError] = useState(false)
+    const text = "Contact Me";
+    //    console.log(process.env.NEXT_PUBLIC_SERVICE_ID);
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, 'template_qqfb71d', form.current, 'WW-EyD5gED4_nzldg')
+            .then((result) => {
+                console.log(result.text);
+                e.target.reset()
+                toast.success('message sent')
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
 
 
 
 
     return (
         <motion.div
-            className='h-full'
+            className='min-h-screen overflow-y-scroll md:overflow-y-hidden lg:overflow-y-hidden xl:overflow-y-hidden'
             initial={{ y: "-200vh" }}
             animate={{ y: "0%" }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1.2 }}
         >
-            <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+
+            <Toaster />
+            <div className='h-full flex flex-col items-center lg:flex-row px-5 lg:px-20 xl:px-48 gap-3'>
                 {/* Text container */}
                 <div className='h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-2xl md:text-3xl lg:text-4xl'>
                     <div className=''>
@@ -33,13 +55,14 @@ const ContactPage = () => {
                                 }}
                             >{letter}</motion.span>
                         ))}
-                        😉
+                        😎
                     </div>
+
 
                 </div>
                 {/* FORM CONTAINER */}
-                <div className=''>
-                    <form className="h-1/2 lg:h-full bg-blue-100 backdrop:blur-md rounded-lg text-base flex flex-col gap-8 justify-center p-24">
+                <div className='h-1/2 flex-1  bg-blue-100 backdrop:blur-md rounded-lg text-base'>
+                    <form ref={form} onSubmit={sendEmail} className="h-1/2 lg:h-full flex flex-col gap-8 justify-center p-12 md:p-24">
 
                         <span>Dear Mahedi,</span>
 
@@ -47,7 +70,7 @@ const ContactPage = () => {
                             <div className="flex flex-row items-center">
                                 <textarea
                                     rows={3}
-                                    name="text"
+                                    name="message"
                                     className="resize-none peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-black focus:border-blue-600 focus:outline-none focus:ring-0"
                                     placeholder=" "
                                 />
@@ -58,10 +81,11 @@ const ContactPage = () => {
                             </div>
 
                         </div>
+
                         <div className="relative z-0 my-5">
                             <div className="flex flex-row items-center">
                                 <input
-                                    name="emails"
+                                    name="your_email"
                                     className="resize-none peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-black focus:border-blue-600 focus:outline-none focus:ring-0"
                                     placeholder=" "
                                 />
@@ -75,14 +99,29 @@ const ContactPage = () => {
                         <span>Regards</span>
 
                         <div>
-                            <button className='px-3 py-2 md:px-3 md:py-3 lg:px-4 lg:py-3 text-xs lg:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white mb-2'>Submit</button>
-                            <div>
-                                {success && <span className='text-green-600 font-semibold'>Your message has been sent successfully!</span>}
-                                {error && <span className='text-red-600 font font-semibold'>Something went wrong!</span>}
-                            </div>
+                            <button className='px-4 py-3 text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white mb-2'>Submit</button>
 
                         </div>
                     </form>
+                    <div className='flex md:hidden justify-center gap-6 mb-3 items-center'>
+                        {/* TODO : input valid profile links */}
+                        <Link href="/https://github.com/Mahedi205339">
+                            <Image src="/github.png" alt='github' width={32} height={32} />
+                        </Link>
+
+                        <Link href="/https://www.linkedin.com/in/mahedi205339/">
+                            <Image src="/linkedin.png" alt='linkedin' width={32} height={32} />
+                        </Link>
+
+                        <Link href="/https://www.facebook.com/profile.php?id=100077396804897">
+                            <Image src="/facebook.png" alt='facebook logo' width={32} height={32} />
+                        </Link>
+
+                        <Link href="/https://www.instagram.com/mahedi_hasan_turag/">
+                            <Image src="/instagram.png" alt='instagram' width={32} height={32} />
+                        </Link>
+
+                    </div>
                 </div>
 
             </div>
