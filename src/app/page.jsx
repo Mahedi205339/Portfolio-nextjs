@@ -67,7 +67,7 @@ const Homepage = () => {
               <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>Contact Me</button>
             </Link>
             <a href='/Mahedi_resume.pdf' download="Mahedi_resume.pdf" className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white flex flex-row gap-3'>
-              <IoMdDownload className='text-black' size={30}/>
+              <IoMdDownload className='text-black' size={24}/>
               <p>Resume</p>
             </a>
 
