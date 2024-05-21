@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Mahedi Portfolio",
   description: "Animated portfolio page",
+  icon: {
+    icon:['/favicon.ico?v=4']
+  }
 };
 
 export default function RootLayout({ children }) {
