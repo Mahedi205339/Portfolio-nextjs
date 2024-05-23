@@ -70,7 +70,7 @@ const PortfolioPage = () => {
                                         <button className='px-3 py-2 md:px-4 md:py-3 text-xs md:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>Live site</button>
                                     </Link>
 
-                                    <Link href="/https://github.com/deltatranslator/translator-delta-client">
+                                    <Link href="https://github.com/deltatranslator/translator-delta-client">
                                         <button className='px-3 py-2 md:px-3 md:py-3 lg:px-4 lg:py-3 text-xs lg:text-base  work-text rounded-lg ring-black bg-gradient-to-r from-cyan-500 to-blue-600 text-white disabled:'>Source code</button>
                                     </Link>
 
