@@ -105,19 +105,19 @@ const ContactPage = () => {
                     </form>
                     <div className='flex md:hidden justify-center gap-6 mb-3 items-center'>
                         {/* TODO : input valid profile links */}
-                        <Link href="/https://github.com/Mahedi205339">
+                        <Link href="https://github.com/Mahedi205339">
                             <Image src="/github.png" alt='github' width={32} height={32} />
                         </Link>
 
-                        <Link href="/https://www.linkedin.com/in/mahedi205339/">
+                        <Link href="https://www.linkedin.com/in/mahedi205339/">
                             <Image src="/linkedin.png" alt='linkedin' width={32} height={32} />
                         </Link>
 
-                        <Link href="/https://www.facebook.com/profile.php?id=100077396804897">
+                        <Link href="https://www.facebook.com/profile.php?id=100077396804897">
                             <Image src="/facebook.png" alt='facebook logo' width={32} height={32} />
                         </Link>
 
-                        <Link href="/https://www.instagram.com/mahedi_hasan_turag/">
+                        <Link href="https://www.instagram.com/mahedi_hasan_turag/">
                             <Image src="/instagram.png" alt='instagram' width={32} height={32} />
                         </Link>
 
